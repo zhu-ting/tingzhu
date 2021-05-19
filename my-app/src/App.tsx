@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import MouseTracker from './components/MouseTracker';
+import useURLLoader from './hooks/useURLLoader';
 import './App.css';
 
 function App() {
+  const [ data, loading ] = useURLLoader('https://dog.ceo/api/breed/frise/bichon/images/random');
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,7 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <MouseTracker />
+        { loading ? <p>Loading...</p> :
+        <img src={data && data.message} width="500" height="500" />}
         <a
           className="App-link"
           href="https://reactjs.org"
