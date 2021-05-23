@@ -4,6 +4,7 @@ import './App.css';
 import Button, { ButtonType } from './Button/button';
 import Menu from './Menu/menu';
 import MenuItem from './Menu/menuItem';
+import SubMenu from './Menu/subMenu';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Menu defaultIndex={0}>
           <MenuItem>link1</MenuItem>
           <MenuItem>link2</MenuItem>
-          <MenuItem>link3</MenuItem>
+          <MenuItem><SubMenu/>link3</MenuItem>
         </Menu>
         <a
           className="App-link"
