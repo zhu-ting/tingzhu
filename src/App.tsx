@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button, { ButtonSize, ButtonType } from './Button/button';
 
 function App() {
   return (
@@ -10,6 +11,11 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <div>
+          <Button disabled>Button</Button>
+          <Button btnType={ButtonType.Default}>Button</Button>
+          <Button btnType={ButtonType.Danger}>Button</Button>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
