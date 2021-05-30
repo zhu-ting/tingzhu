@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Button, { ButtonType } from './Button/button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <FontAwesomeIcon icon={faCoffee} />
         <div>
           <Button disabled>Button</Button>
           <Button btnType={ButtonType.Default}>Button</Button>
